@@ -4,7 +4,7 @@
 // // @route			/test
 // router.get('/test', (req, res) => { res.status(200).json({message: 'server running ' + currentTime}) })
 
-// // @desc			Get all s
+// // @desc			Get all s   
 // // @route			GET /
 // router.get('/', (req, res) => {    })
 
