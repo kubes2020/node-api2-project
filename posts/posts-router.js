@@ -61,6 +61,19 @@ router.get('/api/posts/:id/comments', (req, res) => {
 
  // @desc		Add a new post
 // @route		POST /
+router.post('/api/posts', (req, res) => {
+    Posts.insert(req.body)
+    .then(data =>{
+        console.log("successful post")
+        res.status(201).json(data)
+    })
+    .catch(error => {
+        res.status(500).json({
+            message: error.message, stack: error.stack
+        })
+    })
+})
+
 // @desc		Add a new post
 // @route		POST /:id/comments
 router.post('/api/posts/:id/comments', (req, res) => {
